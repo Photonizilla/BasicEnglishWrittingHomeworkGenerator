@@ -4,8 +4,12 @@ inline void getLine(char* s);
 inline void putLine(const char* s);
 inline void copyLine(char* target, const char* s);
 
-int main() {
+int main(int argc, char** argv) {
 
+	if (argc != 2) {
+		printf("Error!\n");
+		return 0;
+	}
 	char line[1000];
 	char** originals = new char*[10000];
 	char** translationsChn = new char*[10000];
@@ -18,32 +22,7 @@ int main() {
 	i = 0;
 	j = 0;
 
-	freopen("libtranslation_add.md", "r", stdin);			// Those already in the library
-	while (true) {
-		getLine(line);
-		if (line[0] == '%')
-			break;
-		if (line[0] == '\0')
-			continue;
-		if (isOrg) {
-			isOrg = false;
-			n++;
-			originals[n] = new char[1000];
-			copyLine(originals[n], line);
-		} else if (isChn) {
-			isChn = false;
-			i++;
-			translationsChn[i] = new char[1000];
-			copyLine(translationsChn[i], line);
-		} else {
-			isOrg = true;
-			isChn = true;
-			j++;
-			translationsEng[j] = new char[1000];
-			copyLine(translationsEng[j], line);
-		}
-	}
-	freopen("add_to_lib.md", "r", stdin);					// Those to be added
+	freopen(argv[1], "r", stdin);			// Those already in the library
 	while (true) {
 		getLine(line);
 		if (line[0] == '%')
@@ -81,9 +60,6 @@ int main() {
 		putLine(translationsChn[k]);
 		putLine(translationsEng[k]);
 	}
-	printf("%c\n", '%');
-
-	freopen("add_to_lib.md", "w", stdout);					// Clear already added
 	printf("%c\n", '%');
 
 	delete[] originals;

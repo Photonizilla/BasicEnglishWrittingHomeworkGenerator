@@ -1,27 +1,25 @@
 #include <stdio.h>
-#include <random>
 
 inline void getLine(char* s);
 inline void putLine(const char* s);
 inline void copyLine(char* target, const char* s);
-inline void Generate(int* permutation, const int n);
+inline bool repeated(char** list, const int n, const char* s);
 
 int main() {
-
-	freopen("libtranslation.md", "r", stdin);
 
 	char line[1000];
 	char** originals = new char*[10000];
 	char** translationsChn = new char*[10000];
 	char** translationsEng = new char*[10000];
 	int i, j, n;
-	int permutation[10000];
 	bool isChn = true;
 	bool isOrg = true;
 	
 	n = 0;
 	i = 0;
 	j = 0;
+
+	freopen("libtranslation_add.md", "r", stdin);			// Those already in the library
 	while (true) {
 		getLine(line);
 		if (line[0] == '%')
@@ -29,6 +27,11 @@ int main() {
 		if (line[0] == '\0')
 			continue;
 		if (isOrg) {
+			if (repeated(originals, n, line)) {
+				getLine(line);
+				getLine(line);
+				continue;
+			}
 			isOrg = false;
 			n++;
 			originals[n] = new char[1000];
@@ -53,39 +56,17 @@ int main() {
 		return 0;
 	}
 
-	Generate(permutation, n);
-
-	freopen("productOriginals.md", "w", stdout);
-	printf("# Originals\n\n");
-	int week = 1, day = 1;
+	freopen("libtranslation_add.md", "w", stdout);
 	for (int k = 1; k <= n; k++) {
-		if (k % 18 == 1) {
-			printf("## Week %d\n\n", week++);
-			day = 1;
-		}
-		if (k % 3 == 1) {
-			printf("### Day %d\n", day++);
-		}
-		putLine(originals[permutation[k]]);
-		printf("\n");
+		putLine(originals[k]);
+		putLine(translationsChn[k]);
+		putLine(translationsEng[k]);
 	}
+	printf("%c\n", '%');
 
-	freopen("productTranslations.md", "w", stdout);
-	printf("# Translations\n\n");
-	week = 1, day = 1;
-	for (int k = 1; k <= n; k++) {
-		if (k % 18 == 1) {
-			printf("## Week %d\n\n", week++);
-			day = 1;
-		}
-		if (k % 3 == 1) {
-			printf("### Day %d\n", day++);
-		}
-		putLine(translationsChn[permutation[k]]);
-		printf("\n");
-		putLine(translationsEng[permutation[k]]);
-		printf("\n");
-	}
+	delete[] originals;
+	delete[] translationsChn;
+	delete[] translationsEng;
 
 	return 0;
 }
@@ -109,19 +90,22 @@ inline void copyLine(char* target, const char* s) {
 	} while (s[i++] != '\0');
 }
 
-inline void Generate(int* permutation, const int n) {
-	bool taken[10000];
+inline bool repeated(char** list, const int n, const char* s) {
+	bool same;
 	for (int i = 1; i <= n; i++) {
-		taken[i] = false;
-	}
-	std::random_device rd;
-	std::mt19937 ran(rd());
-	std::uniform_int_distribution<int> distr(1, n);
-	for (int i = 1; i <= n; i++) {
+		int j = -1;
+		same = true;
 		do {
-			permutation[i] = distr(ran);
-		} while (taken[permutation[i]]);
-		taken[permutation[i]] = true;
+			j++;
+			if (list[i][j] != s[j]) {
+				same = false;
+				break;
+			}
+		} while (list[i][j] != '\0' && s[j] != '\0');
+		if (same) {
+			return true;
+		}
 	}
+	return false;
 }
 

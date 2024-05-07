@@ -1,10 +1,8 @@
 #include <stdio.h>
-#include <random>
 
 inline void getLine(char* s);
 inline void putLine(const char* s);
 inline void copyLine(char* target, const char* s);
-inline void Generate(int* permutation, const int n);
 
 int main(int argc, char** argv) {
 
