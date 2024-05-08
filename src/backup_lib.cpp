@@ -12,6 +12,10 @@ int main(int argc, char** argv) {
         return 0;
     }
 
+	if (argc != 2) {
+		printf("Error!\n");
+		return 0;
+	}
 	char line[1000];
 	char** originals = new char*[10000];
 	char** translationsChn = new char*[10000];
@@ -24,7 +28,7 @@ int main(int argc, char** argv) {
 	i = 0;
 	j = 0;
 
-	freopen("../markdown/libtranslation.md", "r", stdin);			// Those already in the library
+	freopen("../markdown/libtranslation_add.md", "r", stdin);			// Those already in the library
 	while (true) {
 		getLine(line);
 		if (line[0] == '%')
@@ -56,7 +60,7 @@ int main(int argc, char** argv) {
 		return 0;
 	}
 
-	freopen("../markdown/libtranslation_add.md", "w", stdout);
+	freopen("../markdown/libtranslation.md", "w", stdout);
 	for (int k = 1; k <= n; k++) {
 		putLine(originals[k]);
 		putLine(translationsChn[k]);
@@ -91,7 +95,7 @@ inline void copyLine(char* target, const char* s) {
 }
 
 inline bool at_bin(const char* s) {
-    char loc[] = "./restore_lib";
+    char loc[] = "./backup_lib";
     int i = 1;
     do {
         i++;
@@ -100,5 +104,4 @@ inline bool at_bin(const char* s) {
     } while (s[i] != '\0');
     return true;
 }
-
 

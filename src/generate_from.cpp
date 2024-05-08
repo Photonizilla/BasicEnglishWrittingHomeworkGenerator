@@ -5,8 +5,15 @@ inline void getLine(char* s);
 inline void putLine(const char* s);
 inline void copyLine(char* target, const char* s);
 inline void Generate(int* permutation, const int n);
+inline bool at_bin(const char* s);
+inline void move_to_dir(char* dir, const char* s);
 
 int main(int argc, char** argv) {
+    
+    if (!at_bin(argv[0])) {
+        printf("Please run this program at location bin/.\n");
+        return 0;
+    }
 
 	if (argc != 2) {
 		printf("Error!\n");
@@ -19,7 +26,9 @@ int main(int argc, char** argv) {
 	printf("  End week: ");
 	scanf("%d", &endWeek);
 
-	freopen(argv[1], "r", stdin);
+    char dir[100] = "../backup/";
+    move_to_dir(dir, argv[1]);
+    freopen(dir, "r", stdin);
 
 	char line[1000];
 	char** originals = new char*[10000];
@@ -70,7 +79,7 @@ int main(int argc, char** argv) {
 
 	Generate(permutation, n);
 
-	freopen("productOriginals.md", "w", stdout);
+	freopen("../products/productOriginals.md", "w", stdout);
 	printf("# Originals\n\n");
 	int week = startWeek, day = 1;
 	for (int k = 1; k <= n; k++) {
@@ -88,7 +97,7 @@ int main(int argc, char** argv) {
 		printf("\n");
 	}
 
-	freopen("productTranslations.md", "w", stdout);
+	freopen("../products/productTranslations.md", "w", stdout);
 	printf("# Translations\n\n");
 	week = startWeek, day = 1;
 	for (int k = 1; k <= n; k++) {
@@ -148,5 +157,24 @@ inline void Generate(int* permutation, const int n) {
 		} while (taken[permutation[i]]);
 		taken[permutation[i]] = true;
 	}
+}
+
+inline bool at_bin(const char* s) {
+    char loc[] = "./generate_from";
+    int i = 1;
+    do {
+        i++;
+        if (s[i] != loc[i])
+            return false;
+    } while (s[i] != '\0');
+    return true;
+}
+
+inline void move_to_dir(char* dir, const char* s) {
+    int i = -1;
+    do {
+        i++;
+        dir[i + 10] = s[i];
+    } while (s[i] != '\0');
 }
 

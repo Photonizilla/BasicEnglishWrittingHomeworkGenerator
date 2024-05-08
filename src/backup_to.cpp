@@ -3,8 +3,15 @@
 inline void getLine(char* s);
 inline void putLine(const char* s);
 inline void copyLine(char* target, const char* s);
+inline bool at_bin(const char* s);
+inline void move_to_dir(char* dir, const char* s);
 
 int main(int argc, char** argv) {
+    
+    if (!at_bin(argv[0])) {
+        printf("Please run this program at location bin/.\n");
+        return 0;
+    }
 
 	if (argc != 2) {
 		printf("Error!\n");
@@ -22,7 +29,7 @@ int main(int argc, char** argv) {
 	i = 0;
 	j = 0;
 
-	freopen("libtranslation_add.md", "r", stdin);			// Those already in the library
+	freopen("../markdown/libtranslation_add.md", "r", stdin);			// Those already in the library
 	while (true) {
 		getLine(line);
 		if (line[0] == '%')
@@ -54,7 +61,9 @@ int main(int argc, char** argv) {
 		return 0;
 	}
 
-	freopen(argv[1], "w", stdout);
+    char dir[100] = "../backup/";
+    move_to_dir(dir, argv[1]);
+	freopen(dir, "w", stdout);
 	for (int k = 1; k <= n; k++) {
 		putLine(originals[k]);
 		putLine(translationsChn[k]);
@@ -88,4 +97,22 @@ inline void copyLine(char* target, const char* s) {
 	} while (s[i++] != '\0');
 }
 
+inline bool at_bin(const char* s) {
+    char loc[] = "./backup_to";
+    int i = 1;
+    do {
+        i++;
+        if (s[i] != loc[i])
+            return false;
+    } while (s[i] != '\0');
+    return true;
+}
+
+inline void move_to_dir(char* dir, const char* s) {
+    int i = -1;
+    do {
+        i++;
+        dir[i + 10] = s[i];
+    } while (s[i] != '\0');
+}
 

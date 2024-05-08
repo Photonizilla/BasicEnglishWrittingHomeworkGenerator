@@ -5,8 +5,14 @@ inline void getLine(char* s);
 inline void putLine(const char* s);
 inline void copyLine(char* target, const char* s);
 inline void Generate(int* permutation, const int n);
+inline bool at_bin(const char* s);
 
-int main() {
+int main(int argc, char** argv) {
+
+	if (!at_bin(argv[0])) {
+		printf("Please run this program at location bin/.\n");
+		return 0;
+	}
 
 	int startWeek, endWeek;
 	printf("Start week: ");
@@ -14,7 +20,7 @@ int main() {
 	printf("  End week: ");
 	scanf("%d", &endWeek);
 
-	freopen("libtranslation_add.md", "r", stdin);
+	freopen("../markdown/libtranslation_add.md", "r", stdin);
 
 	char line[1000];
 	char** originals = new char*[10000];
@@ -24,7 +30,7 @@ int main() {
 	int permutation[10000];
 	bool isChn = true;
 	bool isOrg = true;
-	
+
 	n = 0;
 	i = 0;
 	j = 0;
@@ -65,7 +71,7 @@ int main() {
 
 	Generate(permutation, n);
 
-	freopen("productOriginals.md", "w", stdout);
+	freopen("../products/productOriginals.md", "w", stdout);
 	printf("# Originals\n\n");
 	int week = startWeek, day = 1;
 	for (int k = 1; k <= n; k++) {
@@ -83,7 +89,7 @@ int main() {
 		printf("\n");
 	}
 
-	freopen("productTranslations.md", "w", stdout);
+	freopen("../products/productTranslations.md", "w", stdout);
 	printf("# Translations\n\n");
 	week = startWeek, day = 1;
 	for (int k = 1; k <= n; k++) {
@@ -144,4 +150,16 @@ inline void Generate(int* permutation, const int n) {
 		taken[permutation[i]] = true;
 	}
 }
+
+inline bool at_bin(const char* s) {
+	char loc[] = "./generator";
+	int i = 1;
+	do {
+		i++;
+		if (s[i] != loc[i])
+			return false;
+	} while (s[i] != '\0');
+	return true;
+}
+
 

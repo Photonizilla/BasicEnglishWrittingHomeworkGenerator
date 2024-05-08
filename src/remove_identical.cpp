@@ -4,8 +4,14 @@ inline void getLine(char* s);
 inline void putLine(const char* s);
 inline void copyLine(char* target, const char* s);
 inline bool repeated(char** list, const int n, const char* s);
+inline bool at_bin(const char* s);
 
-int main() {
+int main(int argc, char** argv) {
+    
+    if (!at_bin(argv[0])) {
+        printf("Please run this program at location bin/.\n");
+        return 0;
+    }
 
 	char line[1000];
 	char** originals = new char*[10000];
@@ -19,7 +25,7 @@ int main() {
 	i = 0;
 	j = 0;
 
-	freopen("libtranslation_add.md", "r", stdin);			// Those already in the library
+	freopen("../markdown/libtranslation_add.md", "r", stdin);			// Those already in the library
 	while (true) {
 		getLine(line);
 		if (line[0] == '%')
@@ -56,7 +62,7 @@ int main() {
 		return 0;
 	}
 
-	freopen("libtranslation_add.md", "w", stdout);
+	freopen("../markdown/libtranslation_add.md", "w", stdout);
 	for (int k = 1; k <= n; k++) {
 		putLine(originals[k]);
 		putLine(translationsChn[k]);
@@ -107,5 +113,16 @@ inline bool repeated(char** list, const int n, const char* s) {
 		}
 	}
 	return false;
+}
+
+inline bool at_bin(const char* s) {
+    char loc[] = "./remove_identical";
+    int i = 1;
+    do {
+        i++;
+        if (s[i] != loc[i])
+            return false;
+    } while (s[i] != '\0');
+    return true;
 }
 

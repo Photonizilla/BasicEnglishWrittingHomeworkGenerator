@@ -3,8 +3,14 @@
 inline void getLine(char* s);
 inline void putLine(const char* s);
 inline void copyLine(char* target, const char* s);
+inline bool at_bin(const char* s);
 
-int main() {
+int main(int argc, char** argv) {
+    
+    if (!at_bin(argv[0])) {
+        printf("Please run this program at location bin/.\n");
+        return 0;
+    }
 
 	char line[1000];
 	char** originals = new char*[10000];
@@ -18,7 +24,7 @@ int main() {
 	i = 0;
 	j = 0;
 
-	freopen("libtranslation_add.md", "r", stdin);			// Those already in the library
+	freopen("../markdown/libtranslation_add.md", "r", stdin);			// Those already in the library
 	while (true) {
 		getLine(line);
 		if (line[0] == '%')
@@ -43,7 +49,7 @@ int main() {
 			copyLine(translationsEng[j], line);
 		}
 	}
-	freopen("add_to_lib.md", "r", stdin);					// Those to be added
+	freopen("../AddToLibrary/add_to_lib.md", "r", stdin);				// Those to be added
 	while (true) {
 		getLine(line);
 		if (line[0] == '%')
@@ -75,7 +81,7 @@ int main() {
 		return 0;
 	}
 
-	freopen("libtranslation_add.md", "w", stdout);
+	freopen("../markdown/libtranslation_add.md", "w", stdout);
 	for (int k = 1; k <= n; k++) {
 		putLine(originals[k]);
 		putLine(translationsChn[k]);
@@ -83,7 +89,7 @@ int main() {
 	}
 	printf("%c\n", '%');
 
-	freopen("add_to_lib.md", "w", stdout);					// Clear already added
+	freopen("../AddToLibrary/add_to_lib.md", "w", stdout);				// Clear already added
 	printf("%c\n", '%');
 
 	delete[] originals;
@@ -110,6 +116,17 @@ inline void copyLine(char* target, const char* s) {
 	do {
 		target[i] = s[i];
 	} while (s[i++] != '\0');
+}
+
+inline bool at_bin(const char* s) {
+    char loc[] = "./add_to_lib";
+    int i = 1;
+    do {
+        i++;
+        if (s[i] != loc[i])
+            return false;
+    } while (s[i] != '\0');
+    return true;
 }
 
 
