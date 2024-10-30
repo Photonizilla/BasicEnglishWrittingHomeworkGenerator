@@ -1,0 +1,297 @@
+<!DOCTYPE html><html><head>
+      <title>productTranslations</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/nickhuang/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.13/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="translations">Translations </h1>
+<h2 id="week-11">Week 11 </h2>
+<h3 id="day-1">Day 1 </h3>
+<p>反对者需要表明科学主义有什么问题，而不是根据定义谴责它.</p>
+<p>Instead of condemning scientism by its definition, opponents need to show what is wrong with it.</p>
+<p>尽管如此, 生活在人类将迎接挑战的希望中, 并在这种希望中找到意义和动力是理性的. 同样, 我认为生活在一个更好的宇宙是可能的希望中是理性的.</p>
+<p>Still, it is rational to live in hope that human will rise to the challenge and find meaning and motivation in that hope. Like wise, I believe that it is rational to live in hope that there will be a better universe.</p>
+<p>这些陈述是不一致的; 它们不能都为真.</p>
+<p>Those statements are jointly inconsistent; they can’t all be true together.</p>
+<h3 id="day-2">Day 2 </h3>
+<p>科学的范围被同时缩小和扩大了, 而这取决于科学运用的时间地点和文化背景.</p>
+<p>The scope of science has both narrowed and broadened, and it is up to the time space and cultural context where it was conducted.</p>
+<p>如果我们认真对待进化生物学, 那么我们当然应该拒绝任何本质主义的概念.</p>
+<p>If we take evolutionary biology seriously, we certainly should reject any essentialist conception of it.</p>
+<p>在大数据中添加错误的成分, 你将得到潜在的有毒输出.</p>
+<p>Add the wrong ingredients into the Big Data recipe, and you’ll get a potentially toxic output.</p>
+<h3 id="day-3">Day 3 </h3>
+<p>在悲伤过程中历经困难的默哀的人通常将他们的处境描述为极其麻木、压倒性和衰弱.</p>
+<p>Bereaved individuals experiencing difficulties in their grief process often describe their situation as extremely numbing, overwhelming and debilitating.</p>
+<p>研究分歧有多深将阐释问题的严重性.</p>
+<p>Examining how deep disagreements arise will show the gravity of the issue.</p>
+<p>他们认为聪明的人应该永远保持冷静, 虽然他们也有激情的时候(事实上他们是一个非常容易激动的种族), 但他们不希望在艺术中延续这种激情, 因为他们认为这种激情是病态的.</p>
+<p>They consider that a wise man should always keep calm, and though they have their passionate times (in fact they are a very excitable race), they do not wish to perpetuate passion in art because they think ill of it.</p>
+<h3 id="day-4">Day 4 </h3>
+<p>触摸并不总是让我们更好地体验事物, 但它肯定会让我们对我们的体验感觉更好.</p>
+<p>Touch does not always make us experience things better, but it certainly makes us feel better about things.</p>
+<p>简而言之, 我们在重复阐释一种想法: 道德品质属于一类人, 而不是个人.</p>
+<p>In short, we are rehearsing the idea that moral qualities belong to categories of people rather than individuals.</p>
+<p>正念法的共同点不是思考自己, 而是参与活动的特定模式.</p>
+<p>Instead of engaging in deliberation about oneself, what the arts of mindfulness have in common is a certain mode of attending to some present events.</p>
+<h3 id="day-5">Day 5 </h3>
+<p>但这里关系到的不仅仅是我们自己的自我保护.</p>
+<p>But it is not only our own self-preservation that is at stake here.</p>
+<p>如果学习和思考就像决定只让事实进入一样简单, 我们永远都不会犯错.</p>
+<p>If learning and thinking were as easy as deciding to let nothing but the facts in, we could never make mistakes.</p>
+<p>西方国家的延续取决于美国人重申他们的西方身份，西方国家认为他们的文明是独特的，而不是普通的，他们团结起来保护它更新他，以应对来自非西方社会的挑战。避免全球文明战争取决于世界领导人接受并合作维持全球政治的多文明特征。</p>
+<p>The survival of the west depends on Americans reaffirming their western identities and western countries think their civilization a particular one rather than a common one and unite together to renew it to preserve it against non-western society’s challenge. Avoidance of a global war depends on world leaders’ acceptance and cooperating to maintain the multicivilizational features of global politics.</p>
+<h3 id="day-6">Day 6 </h3>
+<p>但尽管这些和许多其他哲学家做出了努力, “爱”仍然是一个公认的模糊的概念.</p>
+<p>But despite the efforts of these and many other philosophers, "love" remains a notoriously ambiguous concept.</p>
+<p>因此, 总利润率下降的渐进趋势, 只是资本主义生产方式所特有的一种表现形式, 即劳动的社会生产力的逐步发展. 这并不意味着利润率可能不会因为其他原因而暂时下降.</p>
+<p>Therefore, the gradual tendency of the total rate of profit to decline is only a manifestation peculiar to the capitalist mode of production, that is, the gradual development of the social productive forces of labour. This does not mean that profit margins may not temporarily decline for other reasons.</p>
+<p>保守的传统给了那些依赖流传下来的东西的人对一些问题的错误观点.</p>
+<p>A conservative tradition equips those who rely on what is handed down with false views about a subject.</p>
+<h2 id="week-12">Week 12 </h2>
+<h3 id="day-1-1">Day 1 </h3>
+<p>因此, 对长生不老的渴望是一个悖论: 如果实现它, 它会耗尽自己.</p>
+<p>Thus a desire for immortality is a paradox: it would frustrate itself were it ever to be achieved.</p>
+<p>人们有时认为他们有他们并不真正拥有的信念, 这是公认的.</p>
+<p>It is well established that people sometimes think they have beliefs that they don’t really have.</p>
+<p>引起幻觉和精神错乱, 虽然在今天很少我们很少把它们放在一起, 但他们有很多共同的领域.</p>
+<p>While rarely looked at together today, psychedelics and psychosis share a lot of subjective `territory.</p>
+<h3 id="day-2-1">Day 2 </h3>
+<p>历史似乎不再静止和确定, 人类可以通过自己的无助努力让事情变得更好的这一信仰, 意味着不再需要呼吁上帝寻求帮助.</p>
+<p>History no longer seemed to be static and determined, and the belief that humans could make things better through their own unaided efforts meant that it was no longer needed to appeal to Providence for help.</p>
+<p>讨论较少的是改变了我们许多现代复述的民间传说的性质的历史性转变.</p>
+<p>Less discussed is the historic shift that altered the nature of so many of our modern retellings of folklore.</p>
+<p>隐藏我们喜欢的事情和我们做的事情之间的巨大矛盾, 需要巨大的心理努力, 这让我们几乎没有精力去做其他事情.</p>
+<p>Hiding the contradiction between what we like and what we do takes significant mental effort which leaves us little energy to do anything else.</p>
+<h3 id="day-3-1">Day 3 </h3>
+<p>接受"他人对我们的自我认知至关重要", 是对笛卡尔观点局限性的修正.</p>
+<p>Accepting that others are vital to our self-perception is a correction of the limitations of the Cartesian view.</p>
+<p>其他常见的实证来源也是如此, 比如其他人的言辞或我们自己的感觉.</p>
+<p>The same goes for other common sources of justification, like other peoples’ testimony or our own senses.</p>
+<p>这种方法的美妙之处是它不需要任何努力. 我所说的努力是指那种不一定好的意志力概念.</p>
+<p>The beauty of the method was it required no effort. By effort, I mean that dubious concept of willpower.</p>
+<h3 id="day-4-1">Day 4 </h3>
+<p>Facebook推出的元宇宙被批判为一个锚爪, 旨在分散对公司法律问题的注意力.</p>
+<p>Metaverse launched by Facebook has been critiqued as a fluke that aimed to be a distraction from the company's legal problems.</p>
+<p>终极原因的理念中没有东西可以支持这种想当然的想法.</p>
+<p>There is nothing in the idea of final causes to support such wishful thinking.</p>
+<p>在冷战时期, 我开始了我的职业生涯, 试图成为一名音乐会钢琴家.</p>
+<p>I started my professional life trying to be a concert pianist back in the days of the Cold War.</p>
+<h3 id="day-5-1">Day 5 </h3>
+<p>有了某个假设, 我们围绕着它扭曲现实, 即使面对相反的证据, 也要坚持我们的观点.</p>
+<p>Given some hypothesis, we bend reality around it, clinging to our opinions even in the face of evidence to the contrary.</p>
+<p>人类本能地厌恶有可能的错误.</p>
+<p>Humans have an instinctive aversion towards the possibility of being wrong.</p>
+<p>关键地, 孤独的时刻让我们几乎像第一次一样看待事物的本质.</p>
+<p>Crucially, the moments of solitude permit us to see into the nature of things almost as if for the first time.</p>
+<h3 id="day-6-1">Day 6 </h3>
+<p>许多其他被声称是科学宗教冲突的事件现已揭露为纯粹的编造.</p>
+<p>Many other alleged instances of science-religion conflict have now been exposed as pure inventions.</p>
+<p>从零碎且经常被污染的证据中获得有意义的结果的技术挑战花了数年时间来克服.</p>
+<p>The technological challenges of obtaining meaningful results from fragmentary and often contaminated evidence took years to overcome.</p>
+<p>因为他们曾经认为, 他们不是通过传授技艺, 而是传授产品来训练人们, 好像一个人声称他会传授某种形式的知识来消除脚部疼痛, 却不是教一个人制鞋技术......而是呈现给他他各种鞋子.</p>
+<p>Because they used to think that they train people not by imparting them not the art but by imparting them products, as though any one professing that he would impart a form of knowledge to obviate any pain in the feet were not to teach a man the art of shoe-making but were to present him with several kinds of shoes.</p>
+<h2 id="week-13">Week 13 </h2>
+<h3 id="day-1-2">Day 1 </h3>
+<p>如果犯错误的人是出于意外而不是有意的, 我们大体上会原谅他们.</p>
+<p>We would probably forgive wrongdoers if their offense was accidental as apposed to intentional.</p>
+<p>我们从日常经验中知道, 人的一部分是在社会的熔炉中锻造的.</p>
+<p>We know from daily experience that a person is partly forged in the crucible of community.</p>
+<p>我们似乎不能完全尊重他人, 将他们视为聪明和真诚, 并且仍然完全相信我们是对的, 他们是完全错误的, 除非我们只是同意接受“不同意”.</p>
+<p>It seems that we cannot both fully respect others, regard them as intelligent and sincere, and meanwhile be fully convinced that we are right and they are completely wrong, unless we simply agree to disagree.</p>
+<h3 id="day-2-2">Day 2 </h3>
+<p>然而, 特别是在千禧一代中, 人们似乎越来越有兴趣重新发现简单生活的好处.</p>
+<p>However, there seems to be growing interest, especially among millennials, in rediscovering the benefits of simple life.</p>
+<p>就像所有形式的自我完善一样, 打破这个甲壳需要意图, 和理想的指导.</p>
+<p>Just like all forms of self-improvement, breaking this carapace requires intention, and ideally guidance.</p>
+<p>我们想帮助他们解锁自己, 站得更高, 想得更好.</p>
+<p>We want to help them unlock themselves, stand taller, think better.</p>
+<h3 id="day-3-2">Day 3 </h3>
+<p>让一群聪明人围在桌子旁边只是互相跟着点头, 这是毫无意义的.</p>
+<p>It’s pointless having a group of smart people around a table if all they do is nod along with each other.</p>
+<p>这种简单性和可得性使得那些喜欢哲学中抽象和深奥的人永远不会恰当地接受斯多葛主义.</p>
+<p>This simplicity and accessibility ensure that Stoicism will never be properly accepted by those who prefer the abstracted and esoteric in their philosophies.</p>
+<p>我们对术语的理解有时会超过我们对术语的定义, 当这种情况发生时, 提供定义可能会使清水变浑浊.</p>
+<p>Our understandings of terms sometimes surpass our definitions of them, and when that happens, offering definitions can muddy the waters.</p>
+<h3 id="day-4-2">Day 4 </h3>
+<p>我们大多数人可以回忆起一个朋友, 他/她曾经满足我们的某些核心社交需求, 但逐渐地, 甚至是难以察觉地最终不能满足我们.</p>
+<p>Most of us can recall a friend who once met certain of our core social needs, but who eventually - gradually, even imperceptibly - ultimately failed to do so.</p>
+<p>与其将宇宙目的植根于造物主的愿望, 也许只是宇宙固有的生命的自然趋势, 这种趋势以我们还不理解的方式与更熟悉的物理定律相互作用.</p>
+<p>Rather than grounding cosmic purpose in the desires of a creator, perhaps there just is a natural tendency of life inherent in the universe, which interacts with the more familiar laws of physics in ways we don’t understand yet.</p>
+<p>简而言之, 关于因果关系相互关系的运作知识, 似乎对于我们在世界上取得进展的能力是必不可少的.</p>
+<p>In short, a working knowledge of the way in which causes and effects relate to one another seems indispensible to our ability of progress in the world.</p>
+<h3 id="day-5-2">Day 5 </h3>
+<p>他们的世界观可以在接触外部声音的过程中存活下来, 因为他们的信仰体系让他们为这种智力攻击做好了准备。</p>
+<p>Their worldview can survive the exposure to outside voices because their belief system has prepared them for such intellectual attack.</p>
+<p>日环食给美国, 中美和南美的部分地区带来了一个“火环”.</p>
+<p>The annular eclipse treated some parts of the United States, Central America and South America to a "ring of fire".</p>
+<p>用非常宽的画笔来画, 我们可以观察到西方科学中的两种基本语言制度.</p>
+<p>To paint with a very broad brush, we can observe two basic linguistic régimes in Western science.</p>
+<h3 id="day-6-2">Day 6 </h3>
+<p>我们必须退下来, 从我们通常认为最有趣的东西中抽象.</p>
+<p>We must stand back, and abstract from the very things we usually find of most interest.</p>
+<p>然而, 这两个在时空上相距甚远的人的故事, 不仅仅是关于科学的冷酷而贪婪的.</p>
+<p>Yet the stories of these two men, vastly separated in place and time, are not merely stories of a cold and rapacious science.</p>
+<p>隐性偏见的概念几十年来使社会心理学家着迷.</p>
+<p>The concept of implicit bias has captivated social psychologists for decades.</p>
+<h2 id="week-14">Week 14 </h2>
+<h3 id="day-1-3">Day 1 </h3>
+<p>"Capitalism" 是 Weber 自己的词, 他用他认为合适的方式定义了它.</p>
+<p>"Capitalism" was Weber’s own word and he defined it as he saw fit.</p>
+<p>但这里有两种截然不同的现象在起作用, 每种现象都以非常不同的方式颠覆了信息的流动.</p>
+<p>But there are two very different phenomena at play here, each of which subvert the flow of information in very distinct ways.</p>
+<p>可以说, 虽然听起来很奇怪, 但 Williams 捍卫真理和真实性是当时人文学科中一项不合时宜的工作.</p>
+<p>It’s fair to say, strange as it sounds, that Williams’s defence of truth and truthfulness was an unfashionable work in the humanities at the time.</p>
+<h3 id="day-2-3">Day 2 </h3>
+<p>例如, 记忆测试的实验设计倾向于假设可以明确区分自我和世界.</p>
+<p>The experimental design of memory testing, for example, tends to based on the assumption that it is possible to draw a sharp distinction between the self and the world.</p>
+<p>一个聪明得多的办法是接受金融扭曲的现实.</p>
+<p>A far wiser move is to accept the distorted reality of finance.</p>
+<p>单独的故事可能会凸显诚实或好客的美德, 但民间故事之间对哪些行为是好是坏没有一致看法.</p>
+<p>Individual stories might show the virtues of honesty or hospitality, but there was no agreement among folktales about which action is good or bad.</p>
+<h3 id="day-3-3">Day 3 </h3>
+<p>它没有向我提供对所有相关信息的足够广泛且有代表性的涵盖.</p>
+<p>It doesn’t deliver to me a sufficiently broad and representative coverage of all the relevant information.</p>
+<p>我四处看去, 判断别人的反应, 但他们难以捉摸的脸上没有任何变化的痕迹.</p>
+<p>I glance around to gauge the others’ reactions, but their inscrutable faces bore no mark of change.</p>
+<p>我们很少对这些退出做法可能对我们有什么帮助表现出太多的智力上的好奇心.</p>
+<p>Rarely do we display much intellectual curiosity about what these practices of withdrawal might be doing for us.</p>
+<h3 id="day-4-3">Day 4 </h3>
+<p>随着奥斯卡获奖电影 Amadeus（1984）的出现, 我对他的兴趣增加了.</p>
+<p>My interest in him accelerated with the appearance of the Academy Award-winning film Amadeus (1984).</p>
+<p>他建议, 人允许诚实地对待他们的愤怒, 并公开处理愤怒, 不感到羞耻.</p>
+<p>He recommended that men be allowed to be honest about their anger, and process it openly, without shame.</p>
+<p>我当然不是要否认照片可能在道德上是不尊重的.</p>
+<p>I certainly do not wish to deny that photographs might be possibly morally disrespectful.</p>
+<h3 id="day-5-3">Day 5 </h3>
+<p>但如果我们退一步, 我们可能会认为这件事有点奇怪.</p>
+<p>But if we take a step back, we might find this business a bit strange.</p>
+<p>他们指出需要进一步研究, 五个部落强烈反对, 希望在不进行进一步分析的情况下埋葬骨头.</p>
+<p>They pointed to the need for further study, which the five tribes strenuously opposed, calling for the bones to be buried without further analysis.</p>
+<p>他们寻求一个令人钦佩和感激的光辉形象, 在女人双眼深处被神化.</p>
+<p>They seek a glowing image of admiration and gratitude, deified in the depths of a woman’s two eyes.</p>
+<h3 id="day-6-3">Day 6 </h3>
+<p>提前给出这些, 很难避免这样的结论: 所有生命都包含的坏多于好, 且他们被剥夺了比其包含的多的好.</p>
+<p>Given all the foregoing, it is difficult to escape the conclusion that all lives contain more bad than good, and that they are deprived of more good than they contain.</p>
+<p>一场演出可能还不足以差到让你离开, 但如果你知道它会有多糟糕, 你会来吗?</p>
+<p>A show might not be bad enough for you to leave, but would you even have come if you knew how bad it would be?</p>
+<p>随着人们习惯于立即获得答案, 他们更少自己挖掘信息.</p>
+<p>As people become accustomed to getting immediate answers, they do less digging for information themselves.</p>
+<h2 id="week-15">Week 15 </h2>
+<h3 id="day-1-4">Day 1 </h3>
+<p>我们经常谈论很小的孩子知道的东西, 甚至是在他们学会说话之前, 我们说其它的生物也知道一些事情.</p>
+<p>We often talk about what very young children know, even before they learn to talk, and we say that other creatures know things too.</p>
+<p>因此, 休谟的人类是血和肉、智力和本能、理性和感性的生物.</p>
+<p>Humean humans are therefore creatures of flesh and blood, of intellect and instinct, of reason and passion.</p>
+<p>由于科学知识的日益充分和传播, 全世界对超自然力量的信念注定要消亡.</p>
+<p>Belief in supernatural powers is doomed to die out over the world, for the increasing adequacy and diffusion of scientific knowledge.</p>
+<h3 id="day-2-4">Day 2 </h3>
+<p>事实上, 我们要向他们学的和他们要向我们学的一样多, 但我们从他们那里学到东西的机会要比他们学习我们少的多得多.</p>
+<p>In fact, we have as much to learn from them as them from us, but we have much less chance to learn from them than they have.</p>
+<p>典型的悲伤和相比起来有问题的悲伤之间的区别可以通过类比来说明.</p>
+<p>The differences between the typical and the more problematic version of grief can be illustrated through an analogy.</p>
+<p>愉悦与痛苦从未同时降临在一个人头上, 他们看似对立，但是他们又会先后地让一个人感受到, 他们又是多么奇妙地紧密联系在一起啊.</p>
+<p>How amazing the connection between pleasure and pain is, for they never come to a man together but he who pursues one of them would generally get the other.</p>
+<h3 id="day-3-4">Day 3 </h3>
+<p>他本会指出, 努力工作的能力并不能将现代西方与以前的社会及其价值体系区分开来.</p>
+<p>He would have pointed out that the capacity for hard work did not dist­inguish the modern West from previous soc­ieties and their value systems.</p>
+<p>尽管当隐性偏见是有意识的, 它也是众所周知的难以改变.</p>
+<p>Even when implicit bias is conscious, it is notoriously hard to change.</p>
+<p>然而, 熟悉并不能解释整个现象.</p>
+<p>Yet familiarity doesn’t account for the whole phenomenon.</p>
+<h3 id="day-4-4">Day 4 </h3>
+<p>这可能会使他们免受恐惧, 但他们仍然应该知道, 每个出生都是在等待的死亡.</p>
+<p>That might insulate them against the horror, but they should nonetheless know that every birth is a death in waiting.</p>
+<p>哪些对他们的独特性有着强烈的认同需求的人更有可能变得孤独.</p>
+<p>Those with a strong need of the recognition of their uniqueness may be more liable to loneliness.</p>
+<p>持续增长的监管压力意味着幻觉研究可能无法坚持这些广泛而复杂的幻觉经历的思维方式.</p>
+<p>Increasing regulatory pressure mean that psychedelic research may not be able to hold on to these wide and complex ways of thinking of psychedelic experiences.</p>
+<h3 id="day-5-4">Day 5 </h3>
+<p>问题在于将正念作为治疗各种现代疾病的万用药的倾向.</p>
+<p>The problem is the tendency to present mindfulness as a panacea for all manner of modern ills.</p>
+<p>一个更大的问题是技术损害批判性思维能力.</p>
+<p>An even bigger problem is that technology damages critical-thinking skills.</p>
+<p>事实上, 这是积极倾听的慷慨, 人们可以将这种实践视为接近精神的实践.</p>
+<p>Indeed, such is the generosity of active listening that one can view the practice that borders on the spiritual.</p>
+<h3 id="day-6-4">Day 6 </h3>
+<p>心理饱满是一种来自更复杂的计算的饱胀感.</p>
+<p>Psychological fullness is a feeling of sufficiency that comes from a much more complicated computation.</p>
+<p>当然, 残酷的现实是, 死亡来得不是太早, 就是太晚.</p>
+<p>Of course, the harsh reality is that death comes either too early or too late.</p>
+<p>我们仍然像蚂蚁一样卑微地活着; 虽然寓言告诉我们, 我们很久以前就变成了人; 我们像矮人一样与鹤斗; 这是错上加错, 我们最好的美德在它出现的时候是多余的和额外的不幸.</p>
+<p>We still live poorly, like ants; though the fable tells us that we became human long time ago; we fight with cranes, like pygmies; it is error upon error, and clout upon clout, and our best virtue has for its occasion a superfluous and evitable wretchedness.</p>
+<h2 id="week-16">Week 16 </h2>
+<h3 id="day-1-5">Day 1 </h3>
+<p>大脑向其他大脑学习, 好好倾听是用线连通、打开渠道的最简单方法.</p>
+<p>Brains learn from other brains, and listening well is the simplest method to draw a thread, open a channel.</p>
+<p>如果我们自身改变, 而我们的自我认知形象保持不变, 那么我们是谁和我们认为自己是谁之间, 将有一个深刻的深渊.</p>
+<p>If we change while our self-image remains the same, then there will be a deep abyss between who we are and who we think we are.</p>
+<p>当我们忠于的老朋友不能满足我们的需求, 要求挽回局面是很有帮助的.</p>
+<p>When our old friends to whom we committed fail to meet our need, it’s helpful to ask to salvage the situation.</p>
+<h3 id="day-2-5">Day 2 </h3>
+<p>也许解释一个人们认为显然正确的思维方式会比较困难.</p>
+<p>It may seem difficult to explain a way of thinking that occurs to anyone that it is so obviously correct.</p>
+<p>贯穿整个哲学史, 将我们与动物的世界分开的人性的存在, 经常被暗示, 有时甚至被明确指出.</p>
+<p>The existence of human nature that separates us from the rest of the animal world has often been implied, and sometimes explicitly stated, throughout the history of philosophy.</p>
+<p>这个论题已经被激烈的争论了一个多世纪了, 双方都有新的论述.</p>
+<p>This argument has raged for more than a century now, with new arguments being made on both sides.</p>
+<h3 id="day-3-5">Day 3 </h3>
+<p>当道德相对主义的争论出现在文化战争中时, 它们往往按照以下方式构建.</p>
+<p>When battles over moral relativism have featured in the culture wars, they tend to be framed in the following way.</p>
+<p>在科学的背后, 哲学一直在悄悄地运作.</p>
+<p>Philosophy has always been running quietly in the background of science.</p>
+<p>你会怀疑地看一个声称明天会下雪却没有任何解释的人.</p>
+<p>You would look suspiciously at someone who said that it’s going to snow tomorrow but claimed that there was no explanation for it.</p>
+<h3 id="day-4-5">Day 4 </h3>
+<p>考虑过这个问题的哲学家对这样的结论不会感到惊讶.</p>
+<p>Such a conclusion will not surprise philosophers who have considered the issue.</p>
+<p>这是让另一个人感到不那么孤独、不那么卡住、更有自我洞察的能力的关键因素之一.</p>
+<p>It was one of the key ingredients in making another person feel less alone, less stuck, and more capable of self-insight.</p>
+<p>换句话说, 在进步的传统中强调的不是内容的传承和接续, 而是内容的发展.</p>
+<p>The emphasis, in other words, in progressive tradition is not on the contents inherited and passed on, but on their development.</p>
+<h3 id="day-5-5">Day 5 </h3>
+<p>要了解如何实现这一点, 我们需要记住苏格拉底很久以前引起我们注意的事情.</p>
+<p>To understand how to achieve this, we need to remember what Socrates drew our attention to long ago.</p>
+<p>人们可能会倾向于指出 Goldin 的作品提供了一个例子, 说明如何通过肖像以叙事方式构建我们自己.</p>
+<p>One might be tempted to suggest that Goldin’s work provides an example of how our selves can be constructed in a narrative fashion through portraits.</p>
+<p>但我不敢肯定这一点, 因为这个梦可能是通俗意义上的音乐, 既然被判了死刑, 而这个节日给了我一个喘息的机会, 我想, 如果我满足了这种顾虑, 我就会更自在, 因此在我离开之前, 为了服从这个梦的呼唤, 我写了几首诗.</p>
+<p>But I am not sure about this, as the dream might meant music in a general way, and being under sentence of death, and this festival giving me a respite, I thought I should be safer if I satisfied the scruple, and, in calling to the dream, composed a few verses before I departed.</p>
+<h3 id="day-6-5">Day 6 </h3>
+<p>它与佛教的关系, 特别是其冥想的方法, 是一个持续受争议的领域.</p>
+<p>The way in which it relates to Buddhism, particularly its meditation method, is an ongoing area of controversy.</p>
+<p>时间是我垂钓的小溪. 我对着它喝; 但当我喝酒的时候, 我看到了沙底, 发现它有多浅. 细细的水流流去, 但永恒依旧. 我要喝得更深; 天上的鱼, 水底是布满像星星一样的鹅卵石. 我一个都数不过来.</p>
+<p>Time is the stream I go fishing in. I drink at it; but while I drink I see the sandy bottom and detect how shallow it is. Its little current slides away, but never stops. I am going to drink deeper; fish in the sky, whose bottom is pebbly with stars. I cannot count one.</p>
+<p>全球政治开始沿着文化路线重新配置. 倒挂的旗帜是过渡的标志, 但越来越多的旗帜高高飘扬, 俄罗斯人和其他民族正在动员起来, 在这些旗帜和其他代表他们新文化身份的象征背后游行.</p>
+<p>Global politics began to be reconfigured along culture routes. The upside-down flags were a sign of the transition, but more and more flags are flying high, Russian and other nations are mobilizing and marching behind these and other symbols of their new cultural identities.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
