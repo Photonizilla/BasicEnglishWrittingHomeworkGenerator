@@ -3,8 +3,8 @@ Generates the translation homework from a database.
 
 ## Introduction on the files
 - `Originals.md` and `Translations.md` are original materials, they are combined into `Library.md`.
-- `libtranslation_add.md` is used as the database, `libtranslation.md` is used as a main backup, `libtranslation copy.md` is a double backup.
-- `productOriginals.md` and `productTranslations.md` are (obviously) products.
+- In the directory `markdown/`, `libtranslation_add.md` is used as the database, `libtranslation.md` is used as a main backup, `libtranslation copy.md` is a double backup.
+- In the directory `products/`, `productOriginals.md` and `productTranslations.md` are (obviously) products.
 
 ## Usage
 1. `./generator` generates the products with the database `libtranslation_add.md`.
